@@ -1,0 +1,21 @@
+#N canvas 0 23 450 300 12;
+#X obj 126 114 nbx 5 14 0 250 0 0 empty empty ms 0 -8 0 10 -262144
+-1 -1 110 256;
+#X obj 107 112 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 106 136 metro;
+#X obj 135 164 + 1;
+#X obj 105 164 f;
+#X obj 105 191 mod 16;
+#X obj 105 222 outlet;
+#X obj 171 44 inlet;
+#X text 213 44 interval ms;
+#X connect 0 0 2 1;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 1;
+#X connect 4 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 7 0 0 0;
+#X coords 0 -1 1 1 85 30 2 100 100;

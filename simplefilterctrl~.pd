@@ -1,0 +1,25 @@
+#N canvas 50 23 1382 855 12;
+#X obj 45 426 vcf~ 500 1, f 23;
+#X obj 160 338 *~ 5;
+#X obj 203 362 *~, f 9;
+#X obj 88 309 r mainfreq;
+#X obj 103 102 cnv 15 246 196 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 209 111 simpleadenvctrl~;
+#X obj 171 147 vsl 15 128 1 15 0 0 empty empty empty 0 -9 0 10 -261682
+-1 -1 3800 1;
+#X obj 126 147 vsl 15 128 1 100 0 0 empty empty empty 0 -9 0 10 -261234
+-1 -1 2500 1;
+#X obj 90 21 inlet~;
+#X obj 44 528 outlet~;
+#X text 117 113 freq;
+#X text 166 112 res;
+#X connect 0 1 9 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 1;
+#X connect 3 0 1 0;
+#X connect 5 0 2 1;
+#X connect 6 0 0 2;
+#X connect 7 0 1 1;
+#X connect 8 0 0 0;
+#X coords 0 -1 1 1 250 200 1 100 100;
