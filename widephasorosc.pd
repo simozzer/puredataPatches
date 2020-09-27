@@ -1,24 +1,32 @@
 #N canvas 0 23 1440 855 12;
 #X obj 234 324 + 0;
-#X obj 355 325 - 0;
-#X obj 233 352 phasor~;
-#X obj 355 352 phasor~;
-#X obj 14 140 s phasorwide;
+#X obj 359 320 - 0;
+#X obj 224 424 phasor~;
+#X obj 346 423 phasor~;
 #X obj 267 278 r phasorwide;
 #X obj 275 218 r mainfreq;
-#X obj 105 117 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5600 1;
-#X obj 293 409 *~ 0.5;
-#X obj 295 446 outlet~;
-#X text 120 99 Saw Wide;
-#X connect 0 0 2 0;
-#X connect 1 0 3 0;
-#X connect 2 0 8 0;
-#X connect 3 0 8 0;
-#X connect 5 0 0 1;
-#X connect 5 0 1 1;
-#X connect 6 0 0 0;
-#X connect 6 0 1 0;
-#X connect 7 0 4 0;
-#X connect 8 0 9 0;
-#X coords 0 -1 1 1 88 35 2 100 100;
+#X obj 108 119 hsl 80 15 0 1 0 0 empty empty Saw_Wide -2 -8 0 10 -204786
+-1 -1 0 1;
+#X obj 288 458 *~ 0.5;
+#X obj 281 324 r sawport;
+#X obj 227 382 portamento;
+#X obj 337 381 portamento;
+#X obj 291 495 s~ sawout;
+#X obj 85 106 vsl 15 40 0 0.5 0 0 sawvolctrl sawvol SawVol -12 -9 0
+10 -204786 -1 -1 0 1;
+#X obj 194 105 vsl 15 40 0 100 0 0 sawport empty SawPort -15 -9 0 10
+-204786 -1 -1 0 1;
+#X connect 0 0 9 0;
+#X connect 1 0 10 0;
+#X connect 2 0 7 0;
+#X connect 3 0 7 0;
+#X connect 4 0 0 1;
+#X connect 4 0 1 1;
+#X connect 5 0 0 0;
+#X connect 5 0 1 0;
+#X connect 7 0 11 0;
+#X connect 8 0 9 1;
+#X connect 8 0 10 1;
+#X connect 9 0 2 0;
+#X connect 10 0 3 0;
+#X coords 0 -1 1 1 150 65 2 72 90;

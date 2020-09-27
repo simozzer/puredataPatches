@@ -1,18 +1,18 @@
 #N canvas 0 23 1274 748 12;
 #X obj 12 168 r notetrig;
-#X obj 2 266 simpleadenv~;
+#X obj 36 290 simpleadenv~;
 #X obj 102 103 cnv 15 133 178 empty empty empty 20 12 0 14 -233017
 -66577 0;
 #X obj 112 136 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 7500 1;
 #X text 102 102 delay;
-#X obj 158 136 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+#X obj 158 136 vsl 15 128 0 1000 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 11600 1;
 #X text 148 102 decay;
 #X obj 204 136 vsl 15 128 1 3 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4100 1;
 #X text 194 102 steep;
-#X obj 14 313 outlet~;
+#X obj 16 337 outlet~;
 #X connect 0 0 1 0;
 #X connect 1 0 9 0;
 #X connect 3 0 1 1;

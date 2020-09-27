@@ -1,0 +1,23 @@
+#N canvas 525 127 450 300 12;
+#X obj 309 124 osc~;
+#X obj 118 125 vsl 15 40 0 0.3 0 0 sinvolctrl sinevol SineVol -15 -9
+0 10 -232576 -1 -1 0 1;
+#X obj 157 123 vradio 15 1 0 3 sineoctctrl sineoct SineOct -12 -8 0
+10 -232576 -1 -1 0;
+#X obj 312 100 portamento;
+#X obj 313 74 * 4;
+#X obj 202 125 vsl 15 40 0 100 0 0 sineport empty SinePort -15 -9 0
+10 -232576 -1 -1 2800 1;
+#X obj 348 73 r sineport;
+#X obj 353 44 expr 3 ^ $f1;
+#X obj 344 13 r sineoctctrl;
+#X obj 275 42 r mainfreq;
+#X obj 274 149 s~ sineout;
+#X connect 0 0 10 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 6 0 3 1;
+#X connect 7 0 4 1;
+#X connect 8 0 7 0;
+#X connect 9 0 4 0;
+#X coords 0 -1 1 1 130 80 2 100 100;
